@@ -144,9 +144,9 @@ export const navConfig: NavItem[] = [
         },
     },
 
-    {
-        label: "Admin",
-        href: "/admin",
-    },
+    // {
+    //     label: "Admin",
+    //     href: "/admin",
+    // },
 ];
 
