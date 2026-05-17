@@ -51,7 +51,7 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                                 hidden: {},
                                 show: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
                             }}
-                            className="space-y-8"
+                            className="space-y-10"
                         >
                             {navConfig.map((item) => (
                                 <motion.li
@@ -66,7 +66,7 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                                             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
                                                 {item.label}
                                             </div>
-                                            <ul className="space-y-3">
+                                            <ul className="space-y-4">
                                                 {item.children.map((c) => {
                                                     const isActive = pathname === c.href;
                                                     return (
@@ -76,7 +76,7 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                                                                 onClick={onClose}
                                                                 aria-current={isActive ? "page" : undefined}
                                                                 className={cn(
-                                                                    "flex items-center gap-3 text-2xl font-display font-semibold transition-colors",
+                                                                    "flex items-center gap-3 text-xl font-display font-semibold transition-colors",
                                                                     isActive ? "text-crimson" : "hover:text-crimson"
                                                                 )}
                                                             >
@@ -94,7 +94,7 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                                             onClick={onClose}
                                             aria-current={pathname === item.href ? "page" : undefined}
                                             className={cn(
-                                                "flex items-center gap-3 text-3xl font-display font-semibold transition-colors",
+                                                "flex items-center gap-3 text-2xl font-display font-semibold transition-colors",
                                                 pathname === item.href ? "text-crimson" : "hover:text-crimson"
                                             )}
                                         >

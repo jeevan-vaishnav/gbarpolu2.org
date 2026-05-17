@@ -111,11 +111,10 @@ export function Navbar() {
 
     return (
         <>
-            <header
-                className={cn("fixed inset-x-0 top-0 z-50 transition-all duration-300", scrolled
-                    ? "bg-background/75 backdrop-blur-xl border-b border-border shadow-[0_4px_20px_-8px_rgba(0,0,0,0.1)]" :
-                    "bg-background/40 backdrop-blur-md border-b border-transparent"
-                )}
+            <header className={cn("fixed inset-x-0 top-0 z-50 transition-all duration-300", scrolled
+                ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-[0_4px_20px_-8px_rgba(0,0,0,0.1)]" :
+                "bg-background/80 backdrop-blur-md border-b border-transparent"
+            )}
             >
                 <PageContainer>
                     <div className="flex h-16 items-center justify-between gap-6">
@@ -139,7 +138,7 @@ export function Navbar() {
                                                     <Button
                                                         variant="ghost"
                                                         className={cn("border-none inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                                                            isOpen ? "bg-secondary/10 text-foreground" : isActive ? "text-foreground bg-secondary/10" : "text-foreground/80 hover:text-foreground hover:bg-secondary/60"
+                                                            isOpen ? "bg-secondary/10 text-foreground" : isActive ? "text-foreground bg-secondary/10" : "text-foreground/80 hover:text-foreground hover:bg-secondary/30"
                                                         )}
                                                         aria-expanded={isOpen}
                                                         aria-current={isActive ? "page" : undefined}
@@ -161,7 +160,7 @@ export function Navbar() {
                                                     <Link href={item.href} aria-current={isActive ? "page" : undefined}
                                                         className={cn(
                                                             "relative inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                                                            isActive ? "text-foreground bg-secondary/60" : "text-foreground/80 hover:text-foreground hover:bg-secondary/60"
+                                                            isActive ? "text-foreground bg-secondary/30" : "text-foreground/80 hover:text-foreground hover:bg-secondary/40"
                                                         )}
                                                     >
                                                         {item.label}
@@ -188,7 +187,7 @@ export function Navbar() {
                         <div className="hidden lg:flex items-center gap-2 shrink-0">
                             <Link
                                 href="/login"
-                                className="text-sm font-medium text-foreground/80 hover:text-foreground px-3 py-2 transition-colors duration-200"
+                                className="text-sm font-medium text-foreground/80 hover:text-foreground hover:rounded-full hover:bg-muted px-3 py-2 transition-colors duration-200"
                             >
                                 Official Portal
                             </Link>
@@ -197,7 +196,7 @@ export function Navbar() {
                                 variant="ghost"
                                 asChild
                                 size="default"
-                                className="h-auto px-3 py-2 border-0 rounded-none bg-transparent shadow-none hover:bg-transparent">
+                                className="h-auto px-3 py-2 border-0 rounded-none shadow-none hover:rounded-full hover:bg-muted">
                                 <Link
                                     href="/contact"
                                     className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-200"
