@@ -137,9 +137,9 @@ export function Navbar() {
                                             {
                                                 item.children ? (
                                                     <Button
-                                                        className={cn(
-                                                            "inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                                                            isOpen ? "bg-background text-foreground" : isActive ? "text-foreground bg-secondary/60" : "text-white/80 hover:text-foreground hover:bg-secondary-60"
+                                                        variant="outline"
+                                                        className={cn("border-none inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                                                            isOpen ? "bg-secondary text-foreground" : isActive ? "text-foreground bg-secondary/60" : "text-foreground/80 hover:text-foreground hover:bg-secondary/60"
                                                         )}
                                                         aria-expanded={isOpen}
                                                         aria-current={isActive ? "page" : undefined}
@@ -185,16 +185,28 @@ export function Navbar() {
                                 )
                             }
                         </nav>
-
                         <div className="hidden lg:flex items-center gap-2 shrink-0">
-                            <a href="/login" className="text-sm font-medium text-foreground/80 hover:text-foreground px-3 py-2">
-                                Sign in
-                            </a>
-                            <Button asChild size="sm" className="hidden rounded-full px-5">
-                                <a href="/contact">Get started</a>
-                            </Button>
-                        </div>
+                            <Link
+                                href="/login"
+                                className="text-sm font-medium text-foreground/80 hover:text-foreground px-3 py-2 transition-colors duration-200"
+                            >
+                                Official Portal
+                            </Link>
 
+                            <Button
+                                variant="ghost"
+                                asChild
+                                size="default"
+                                className="h-auto px-3 py-2 border-0 rounded-none bg-transparent shadow-none hover:bg-transparent">
+                                <Link
+                                    href="/contact"
+                                    className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-200"
+                                >
+                                    Contact
+                                </Link>
+                            </Button>
+
+                        </div>
                         <button
                             className="lg:hidden p-2 -mr-2"
                             aria-label="Open menu"

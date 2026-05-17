@@ -106,13 +106,42 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                             ))}
                         </motion.ul>
                     </nav>
-
                     <div className="p-6 border-t border-border">
-                        <Button asChild size="lg" className="w-full rounded-full">
-                            <Link href="/contact" onClick={onClose}>
-                                Get in touch
-                            </Link>
-                        </Button>
+                        <div className="flex flex-col gap-3">
+
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="
+                                w-full border-border/60
+                                bg-transparent
+                                text-foreground/80
+                                hover:text-foreground
+                                hover:bg-secondary/60
+                            "
+                            >
+                                <Link href="/login" onClick={onClose}>
+                                    Official Portal
+                                </Link>
+                            </Button>
+
+                            <Button
+                                asChild
+                                size="lg"
+                                className="
+                                w-full
+                                shadow-sm
+                                transition-all duration-300
+                                hover:shadow-lg
+                            "
+                            >
+                                <Link href="/contact" onClick={onClose}>
+                                    Contact
+                                </Link>
+                            </Button>
+
+                        </div>
                     </div>
                 </motion.div>
             )}
