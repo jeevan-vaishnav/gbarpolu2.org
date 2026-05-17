@@ -4,7 +4,7 @@ import Link from "next/link";
 import logo from "@/public/logo.svg"
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
-import { PageContainer } from "./PageContainer";
+import { PageContainer } from "../shared/page-container";
 import { navConfig, NavItem } from "./nav-config";
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation";
@@ -137,9 +137,9 @@ export function Navbar() {
                                             {
                                                 item.children ? (
                                                     <Button
-                                                        variant="outline"
+                                                        variant="ghost"
                                                         className={cn("border-none inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                                                            isOpen ? "bg-secondary text-foreground" : isActive ? "text-foreground bg-secondary/60" : "text-foreground/80 hover:text-foreground hover:bg-secondary/60"
+                                                            isOpen ? "bg-secondary/10 text-foreground" : isActive ? "text-foreground bg-secondary/10" : "text-foreground/80 hover:text-foreground hover:bg-secondary/60"
                                                         )}
                                                         aria-expanded={isOpen}
                                                         aria-current={isActive ? "page" : undefined}

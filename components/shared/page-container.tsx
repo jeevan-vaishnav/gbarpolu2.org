@@ -12,7 +12,7 @@ export function PageContainer({
     return (
         <div
             className={cn(
-                "mx-auto w-full max-w-7xl px-5",
+                "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8",
                 className
             )}
         >
@@ -20,3 +20,10 @@ export function PageContainer({
         </div>
     );
 }
+
+
+// │   ├── shared/
+// │   │   ├── page-container.tsx
+// │   │   ├── section-heading.tsx
+// │   │   ├── section-badge.tsx
+// │   │   └── section-divider.tsx
