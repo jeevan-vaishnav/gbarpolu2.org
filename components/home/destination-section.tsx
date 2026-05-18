@@ -1,8 +1,9 @@
+'use client'
 import Link from "next/link";
 import { PageContainer } from "../shared/page-container";
 import { Target } from "lucide-react";
 
-export default function DestinationSection() {
+export function DestinationSection() {
     return (
         <section className="bg-navy text-navy-foreground">
             <div className="gold-green-rule" />
