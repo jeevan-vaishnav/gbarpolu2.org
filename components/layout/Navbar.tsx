@@ -145,7 +145,7 @@ export function Navbar() {
                                                     >
                                                         {item.label}
                                                         <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", isOpen && "rotate-180")} />
-                                                        {
+                                                        {/* {
                                                             isActive && (
                                                                 <motion.span
                                                                     layoutId="nav-active-indicator"
@@ -153,8 +153,7 @@ export function Navbar() {
                                                                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                                                                 />
                                                             )
-                                                        }
-
+                                                        } */}
                                                     </Button>
                                                 ) : item.href ? (
                                                     <Link href={item.href} aria-current={isActive ? "page" : undefined}
@@ -164,15 +163,15 @@ export function Navbar() {
                                                         )}
                                                     >
                                                         {item.label}
-                                                        {
+                                                        {/* {
                                                             isActive && (
                                                                 <motion.span
                                                                     layoutId="nav-active-indicator"
-                                                                    className="absolute left-4 right-4 -bottom-0.5 h-[2px] rounded-full bg-crimson"
+                                                                    className="absolute left-4 right-4 -bottom-0.5 h-[2px]  rounded-full bg-crimson"
                                                                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                                                                 />
                                                             )
-                                                        }
+                                                        } */}
                                                     </Link>
                                                 ) : null
                                             }

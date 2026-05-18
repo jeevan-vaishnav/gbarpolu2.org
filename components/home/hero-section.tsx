@@ -5,24 +5,20 @@ import { PageContainer } from "@/components/shared/page-container";
 
 export function HeroSection() {
     return (
-        <section className="relative overflow-hidden bg-[#002868] text-white">
+        <section className="relative overflow-hidden bg-primary text-primary-foreground">
             {/* Background Effects */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-
                 <div className="absolute -right-40 top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full border-[40px] border-white/10" />
-
-                <div className="absolute -right-20 top-1/2 h-[550px] w-[550px] -translate-y-1/2 rounded-full border-[30px] border-[#D9A404]/30" />
-
-                <div className="absolute inset-0 bg-gradient-to-r from-[#002868] via-[#002868]/95 to-[#002868]/70" />
+                <div className="absolute -right-20 top-1/2 h-[550px] w-[550px] -translate-y-1/2 rounded-full border-[30px] border-secondary/30" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(253,195,2,0.18),transparent_35%)]" />
             </div>
 
             <PageContainer className="relative py-28 md:py-36">
-
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
-                    className="max-w-4xl"
                 >
 
                     <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-sm font-medium backdrop-blur">
@@ -47,7 +43,7 @@ export function HeroSection() {
 
                         <Link
                             href="/projects"
-                            className="inline-flex items-center justify-center rounded-md bg-[#BF0A30] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                            className="inline-flex items-center justify-center rounded-md bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground transition hover:opacity-90"
                         >
                             View Projects
                         </Link>

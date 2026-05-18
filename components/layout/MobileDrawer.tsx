@@ -115,7 +115,7 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                                 size="lg"
                                 className="
                                 w-full border-border/60
-                                bg-transparent
+                                bg-secondary
                                 text-foreground/80
                                 hover:text-foreground
                                 hover:bg-secondary/60
