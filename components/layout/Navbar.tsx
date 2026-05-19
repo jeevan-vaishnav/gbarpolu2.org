@@ -65,7 +65,7 @@ function MegaPanel({ item, pathname }: { item: NavItem; pathname: string }) {
                     {item.featured && (
                         <a
                             href={item.featured.href}
-                            className="relative overflow-hidden rounded-xl bg-gradient-to-br from-navy to-navy/80 text-navy-foreground p-5 flex flex-col justify-between hover:opacity-95 transition"
+                            className="relative overflow-hidden rounded-xl bg-gradient-to-br from-green to-green/80 text-green-foreground p-5 flex flex-col justify-between hover:opacity-95 transition"
                         >
                             <div>
                                 <div className="text-[10px] font-bold tracking-[0.2em] text-gold mb-2">FEATURED</div>

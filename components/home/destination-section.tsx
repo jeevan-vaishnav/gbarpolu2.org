@@ -5,7 +5,7 @@ import { Target } from "lucide-react";
 
 export function DestinationSection() {
     return (
-        <section className="bg-navy text-navy-foreground">
+        <section className="bg-green text-green-foreground">
             <div className="gold-green-rule" />
             <PageContainer className=" py-8 flex items-center gap-6">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-tr from-gold via-crimson to-forest flex items-center justify-center shrink-0">
@@ -23,7 +23,7 @@ export function DestinationSection() {
 
 // export function Destination() {
 //   return (
-//     <section className="bg-navy text-navy-foreground">
+//     <section className="bg-green text-green-foreground">
 //       <div className="gold-rule" />
 //       <div className="container-page py-8 flex items-center gap-6">
 //         <div className="h-16 w-16 rounded-full bg-gradient-to-tr from-gold
